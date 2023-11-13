@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="4dp"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/layout_top"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_alignParentTop="true"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/saffron">
+
+                <ImageView
+                    android:id="@+id/btn_back"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/baseline_arrow_back_24"
+                    />
+
+                <TextView
+                    android:id="@+id/tirth_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/list_btn"
+                    android:layout_toEndOf="@id/btn_back"
+                    android:gravity="center"
+                    android:text=" मुकाम "
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/list_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/baseline_menu_white_24"
+                    />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="0dp"
+                android:src="@drawable/temple_img"
+                app:layout_constraintDimensionRatio="1:0.8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/layout_top"
+                app:layout_constraintTop_toBottomOf="@+id/layout_top" />
+
+            <TextView
+                android:id="@+id/text_distancefromhere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="20dp"
+                android:padding="5dp"
+                android:text="यहाँ से दुरी :"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                android:textColor="@color/saffron"/>
+
+            <TextView
+                android:id="@+id/btnSeeMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginTop="196dp"
+                android:paddingVertical="5dp"
+                android:text="28 किमी."
+                android:textColor="@color/saffron"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/text_distancefromhere"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/text_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:paddingVertical="5dp"
+                android:text=" मैप देखे"
+                android:textColor="@color/saffron"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                android:drawablePadding="5dp"
+                android:drawableEnd="@drawable/baseline_location_on_saffron_24"/>
+
+            <TextView
+                android:id="@+id/tirth_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:text="मुकाम बिश्नोई समाज का एक महत्वपूर्ण तीर्थ स्थल है, जिसे तालवा मुकाम के नाम से भी जाना जाता है। मुकाम राजस्थान राज्य के बीकानेर जिले के नोखा तहसील में बीकानेर - जोधपुर राजमार्ग 20 पर स्थित है। नोखा से इसकी दुरी लगभग 16.09 किलोमीटर है। मुकाम बिश्नोई समाज के अष्ट धामों में सबसे महत्त्वपूर्ण धाम है। यहाँ पर गुरु जम्भेश्वर भगवन का भव्य सफ़ेद संगमरमर का मंदिर बना हुआ है। जहाँ गुरु जाम्भोजी की पवित्र समाधि स्थित है। मुकाम धाम में प्रत्येक वर्ष में दो बड़े मेले लगते है - पहला आसोज माह की अमावस्या तथा दूसरा फाल्गुन माह की अमावस्या को, जिनमे पुरे भारत के बिश्नोई श्रदालु दर्शन करने आते है। बाकि महीनो की अमावस्या को भी बड़ी संख्या में श्रदालु यहाँ दर्शन करने आते है।"
+                android:gravity="fill"
+                app:layout_constraintTop_toBottomOf="@id/btnSeeMap"
+                android:paddingVertical="20dp"
+                android:paddingHorizontal="10dp"
+                android:lineSpacingExtra="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginHorizontal="10dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</com.google.android.material.card.MaterialCardView>

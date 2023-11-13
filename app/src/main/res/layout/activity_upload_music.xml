@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadMusic"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload Music"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/white"
+            android:backgroundTint="@color/white"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/etChooseImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="centerCrop"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            android:padding="10dp"
+            android:background="@drawable/edit_text"
+            android:layout_margin="10dp"
+            android:textColorHint="@color/background_gray"
+            android:textColor="@color/black"
+            />
+
+        <EditText
+            android:id="@+id/etArtist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Artist"
+            android:padding="10dp"
+            android:background="@drawable/edit_text"
+            android:layout_margin="10dp"
+            android:textColorHint="@color/background_gray"
+            android:textColor="@color/black"
+            />
+
+        <EditText
+            android:id="@+id/etType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type"
+            android:padding="10dp"
+            android:background="@drawable/edit_text"
+            android:layout_margin="10dp"
+            android:textColorHint="@color/background_gray"
+            android:textColor="@color/black"
+            />
+
+        <EditText
+            android:id="@+id/etDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Duration"
+            android:padding="10dp"
+            android:background="@drawable/edit_text"
+            android:layout_margin="10dp"
+            android:textColorHint="@color/background_gray"
+            android:textColor="@color/black"
+            />
+
+        <EditText
+            android:id="@+id/etSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Size"
+            android:padding="10dp"
+            android:background="@drawable/edit_text"
+            android:layout_margin="10dp"
+            android:textColorHint="@color/background_gray"
+            android:textColor="@color/black"
+            />
+
+        <EditText
+            android:id="@+id/etKeywords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keywords"
+            android:padding="10dp"
+            android:minLines="2"
+            android:background="@drawable/edit_text"
+            android:layout_margin="10dp"
+            android:textColorHint="@color/background_gray"
+            android:textColor="@color/black"
+            />
+
+        <EditText
+            android:id="@+id/etLyrics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lyrics"
+            android:padding="10dp"
+            android:minLines="10"
+            android:background="@drawable/edit_text"
+            android:layout_margin="10dp"
+            android:textColorHint="@color/background_gray"
+            android:textColor="@color/black"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/white"
+                android:backgroundTint="@color/white"
+                android:layout_margin="10dp"
+                >
+
+                <ImageView
+                    android:id="@+id/etChooseMusic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/baseline_music_note_24"
+                    android:scaleType="centerCrop"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvAudioFileName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Click on the Music Icon to choose"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnUpload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload"
+            android:backgroundTint="@color/saffron"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            />
+
+
+    </LinearLayout>
+
+</ScrollView>

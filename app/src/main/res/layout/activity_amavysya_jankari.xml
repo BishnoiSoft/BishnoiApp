@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".AmavysyaJankari">
+
+    <include
+        layout="@layout/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/upper_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/myCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="8dp"
+            android:padding="5dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                >
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:padding="10dp"
+                    android:text=" अमावस्या जानकारी "
+                    android:textAlignment="center"
+                    android:textColor="@color/saffron"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/english_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title"
+                    android:layout_marginLeft="10dp"
+                    android:textAlignment="center"
+                    android:layout_marginRight="10dp"
+                    android:textSize="18sp"
+                    android:text=""
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/hindi_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/english_month"
+                    android:layout_marginLeft="10dp"
+                    android:textAlignment="center"
+                    android:layout_marginRight="10dp"
+                    android:textSize="18sp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/text_startingtime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" अमावस्या लगेगी "
+                    android:layout_below="@id/hindi_month"
+                    android:layout_marginLeft="10dp"
+                    android:textAlignment="center"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20sp"
+                    android:padding="5dp"
+                    android:textColor="@color/tab_indicator_color"
+                    />
+
+                <TextView
+                    android:id="@+id/startingTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_below="@id/text_startingtime"
+                    android:layout_marginLeft="10dp"
+                    android:textAlignment="center"
+                    android:layout_marginRight="10dp"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:inputType="textMultiLine"
+                    android:minLines="2"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/text_endingTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" अमावस्या उतरेगी "
+                    android:layout_below="@id/startingTime"
+                    android:layout_marginLeft="10dp"
+                    android:textAlignment="center"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20sp"
+                    android:padding="5dp"
+                    android:textColor="@color/tab_indicator_color"
+                    />
+
+                <TextView
+                    android:id="@+id/endingTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_endingTime"
+                    android:text=""
+                    android:layout_marginLeft="10dp"
+                    android:textAlignment="center"
+                    android:layout_marginRight="10dp"
+                    android:textSize="18sp"
+                    android:padding="8dp"
+                    android:inputType="textMultiLine"
+                    android:minLines="2"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/btn_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:textAlignment="center"
+                    android:text=" शेयर करे "
+                    android:textColor="@color/saffron"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/baseline_share_24"
+                    android:textSize="18sp"
+                    android:layout_below="@id/endingTime"
+                    android:layout_margin="10dp"
+                    android:padding="4dp"
+                    android:layout_toRightOf="@+id/btn_share_whatsapp"
+                    />
+
+                <TextView
+                    android:id="@+id/btn_copy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/endingTime"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:drawableTop="@drawable/baseline_content_copy_24"
+                    android:drawablePadding="5dp"
+                    android:padding="4dp"
+                    android:text=" कोपी करे "
+                    android:textAlignment="center"
+                    android:textColor="@color/saffron"
+                    android:textSize="18sp"
+                    android:layout_toLeftOf="@+id/btn_share_whatsapp"
+                    />
+
+                <TextView
+                    android:id="@+id/btn_share_whatsapp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/endingTime"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:drawableTop="@drawable/icon_whatsapp_saffron_24"
+                    android:drawablePadding="5dp"
+                    android:padding="4dp"
+                    android:text=" स्टेटस लगाये "
+                    android:textAlignment="center"
+                    android:textColor="@color/saffron"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+                <com.google.android.ads.nativetemplates.TemplateView
+                    android:id="@+id/nativeTemplateView"
+                    android:layout_alignParentBottom= "true"
+                    android:visibility= "visible"
+                    app:gnt_template_type= "@layout/gnt_medium_template_view"
+                    android:layout_width= "match_parent"
+                    android:layout_height= "wrap_content"
+                    android:layout_margin="10dp"/>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#fff</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="background_gray">#A5A2A2</color>
+    <color name="bg_main">#f4f3e5</color>
+    <color name="tab_indicator_color">#F4c430</color>
+    <color name="saffron">#FF9933</color>
+    <color name="shabadwani_bg">#F1E7C9</color>
+    <color name="golden">#FFF4C430</color>
+    <color name="dark_brown">#291709</color>
+    <color name="light_brown">#9A784F</color>
+    <color name="brown">#3B1E08</color>
+
+    <color name="popup_menu_background_color">#FFFFFF</color>
+    <color name="popup_menu_text_color">#000000</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+
+    <color name="music_details_top">#FFD3A578</color>
+</resources>

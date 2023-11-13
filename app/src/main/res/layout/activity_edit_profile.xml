@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfile"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:minHeight="250dp"
+            android:background="@drawable/bg_profile"
+            >
+
+            <RelativeLayout
+                android:id="@+id/upper_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <RelativeLayout
+                    android:id="@+id/layout_create_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/btn_save"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:fontFamily="sans-serif"
+                        android:padding="10dp"
+                        android:text="सेव"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/skip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="sans-serif"
+                        android:padding="10dp"
+                        android:text="आगे"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:drawableEndCompat="@drawable/baseline_arrow_forward_24"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/create_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:fontFamily="sans-serif"
+                        android:padding="10dp"
+                        android:text="प्रोफाइल बनाएं "
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/arrow_back"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="10dp"
+                        android:src="@drawable/baseline_arrow_back_24" />
+
+                    <TextView
+                        android:id="@+id/save_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:fontFamily="sans-serif"
+                        android:padding="10dp"
+                        android:text="सेव"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/edit_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:padding="10dp"
+                        android:layout_margin="0dp"
+                        android:text="प्रोफाइल सम्पादित करे"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentTop="true"
+                        android:fontFamily="sans-serif"
+                        />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/upper_layout"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/guru_jambhoji_ic_round"
+                app:civ_border_color="@color/tab_indicator_color"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/edit_profile_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:civ_border_color="@color/tab_indicator_color"
+                app:civ_border_width="2dp"
+                android:src="@drawable/baseline_edit_white_24"
+                android:padding="5dp"
+                android:layout_alignEnd="@+id/profile_image"
+                android:layout_marginTop="165dp"
+                android:outlineAmbientShadowColor="@color/white"
+                android:outlineSpotShadowColor="@color/white"
+                android:background="@drawable/circle_shape"
+                android:elevation="5dp"
+                />
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/layout_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="150dp"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="20dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:visibility="visible"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="नाम "
+                android:textColor="#4A4848"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textSize="15sp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/filledNameTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginHorizontal="10dp"
+                android:hint="नाम "
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="10dp"
+                app:boxStrokeColor="@color/saffron"
+                android:textColorHint="@color/saffron">
+
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    android:inputType="text"
+                    android:textColorHint="@color/saffron"
+                    android:drawableStart="@drawable/baseline_account_box_saffron_24"
+                    android:drawablePadding="15dp"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="ई-मेल "
+                android:textColor="#4A4848"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textSize="15sp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/filledEmailField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginHorizontal="10dp"
+                android:hint="ई-मेल "
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="10dp"
+                app:boxStrokeColor="@color/saffron"
+                android:textColorHint="@color/saffron">
+
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="@color/saffron"
+                    android:drawableStart="@drawable/baseline_email_saffron_24"
+                    android:drawablePadding="15dp"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="फोन नंबर"
+                android:textColor="#4A4848"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textSize="15sp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/filledPhoneField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="10dp"
+                app:boxStrokeColor="@color/saffron"
+                android:textColorHint="@color/saffron"
+                >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:textSize="18sp"
+                android:textColor="@color/saffron"
+                android:inputType="none"
+                android:textColorHint="@color/saffron"
+                android:drawableStart="@drawable/baseline_phone_24"
+                android:drawablePadding="15dp"
+                android:text="+91 1122334455"
+                />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="लिंग"
+                android:textColor="#4A4848"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textSize="15sp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/filledSpinnerField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginHorizontal="10dp"
+                android:hint="Phone"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="10dp"
+                app:boxStrokeColor="@color/saffron"
+                android:textColorHint="@color/saffron"
+                >
+
+            <Spinner
+                android:id="@+id/gender_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:minHeight="30dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:outlineSpotShadowColor="@color/saffron"
+                />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="जन्म तिथि"
+                android:textColor="#4A4848"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textSize="15sp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/filledDOBField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="10dp"
+                app:boxStrokeColor="@color/saffron"
+                android:textColorHint="@color/saffron"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/saffron"
+                    android:inputType="none"
+                    android:textColorHint="@color/saffron"
+                    android:drawableStart="@drawable/baseline_calendar_month_saffron_24"
+                    android:drawablePadding="15dp"
+                    android:text="05/05/2000"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="पता"
+                android:textColor="#4A4848"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textSize="15sp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/filledAddressField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginHorizontal="10dp"
+                android:hint="Address"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="10dp"
+                app:boxStrokeColor="@color/saffron"
+                android:textColorHint="@color/saffron"
+                app:counterEnabled="true"
+                app:counterMaxLength="200"
+                >
+
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    android:maxLength="200"
+                    android:inputType="textMultiLine"
+                    android:textColorHint="@color/saffron"
+                    android:drawableStart="@drawable/baseline_location_on_saffron_24"
+                    android:drawablePadding="15dp"
+                    android:maxLines="4"
+                    android:minLines="2"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnSaveProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="SAVE"
+                android:layout_below="@id/filledPhoneTextField"
+                android:layout_marginBottom="16dp"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                android:backgroundTint="@color/saffron"
+                app:cornerRadius="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="20dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="0dp"
+    android:background="@color/saffron"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_title_bar">
+
+    <TextView
+        android:id="@+id/bishnoi_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="sans-serif-black"
+        android:padding="5dp"
+        android:text="Bishnoi"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/icon_store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toStartOf="@+id/icon_help"
+        android:layout_toLeftOf="@+id/icon_help"
+        android:padding="5dp"
+        android:src="@drawable/baseline_shopping_cart_white_24" />
+
+    <ImageView
+        android:id="@+id/icon_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toStartOf="@+id/icon_profile"
+        android:layout_toLeftOf="@+id/icon_profile"
+        android:padding="5dp"
+        android:src="@drawable/baseline_search_24" />
+
+    <ImageView
+        android:id="@+id/icon_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toStartOf="@+id/icon_search"
+        android:layout_toLeftOf="@+id/icon_search"
+        android:padding="5dp"
+        android:src="@drawable/baseline_help_outline_black_24" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/icon_profile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/baseline_account_circle_24"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        app:civ_border_color="@color/tab_indicator_color"
+        app:civ_border_width="1dp"/>
+
+</RelativeLayout>

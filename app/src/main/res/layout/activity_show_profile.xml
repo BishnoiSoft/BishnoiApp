@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowProfile"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:minHeight="250dp"
+            android:background="@drawable/bg_profile"
+            >
+
+            <RelativeLayout
+                android:id="@+id/upper_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/arrow_back"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="10dp"
+                        android:src="@drawable/baseline_arrow_back_24" />
+
+                    <ImageView
+                        android:id="@+id/edit_profile_btn_right"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="10dp"
+                        android:src="@drawable/baseline_edit_white_24" />
+
+                    <TextView
+                        android:id="@+id/edit_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:fontFamily="sans-serif"
+                        android:padding="10dp"
+                        android:text="प्रोफाइल"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/upper_layout"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/guru_jambhoji_ic_round"
+                app:civ_border_color="@color/tab_indicator_color"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/edit_profile_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:civ_border_color="@color/tab_indicator_color"
+                app:civ_border_width="2dp"
+                android:src="@drawable/baseline_edit_white_24"
+                android:padding="5dp"
+                android:layout_alignEnd="@+id/profile_image"
+                android:layout_marginTop="165dp"
+                android:outlineAmbientShadowColor="@color/white"
+                android:outlineSpotShadowColor="@color/white"
+                android:background="@drawable/circle_shape"
+                android:elevation="5dp"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            >
+
+            <LinearLayout
+                android:id="@+id/layout_view_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="150dp"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="50dp"
+                android:visibility="visible"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:text="नाम "
+                    android:textColor="#4A4848"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:id="@+id/full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/saffron"
+                    android:textSize="20sp"
+                    android:padding="8dp"
+                    android:text="Username"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="ई-मेल "
+                    android:textColor="#4A4848"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/saffron"
+                    android:textSize="20sp"
+                    android:padding="8dp"
+                    android:text="example@mail.com"
+                    android:textStyle="bold"
+                    android:textColorHint="@color/saffron"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="फोन नंबर"
+                    android:textColor="#4A4848"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/saffron"
+                    android:textSize="20sp"
+                    android:padding="8dp"
+                    android:text="+91 1234567890"
+                    android:textStyle="bold"
+                    android:textColorHint="@color/saffron"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="लिंग"
+                    android:textColor="#4A4848"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:id="@+id/gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/saffron"
+                    android:textSize="20sp"
+                    android:padding="8dp"
+                    android:text="Female"
+                    android:textStyle="bold"
+                    android:textColorHint="@color/saffron"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="जन्म तिथि"
+                    android:textColor="#4A4848"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:id="@+id/dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/saffron"
+                    android:textSize="20sp"
+                    android:padding="8dp"
+                    android:text="01/01/2000"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="पता"
+                    android:textColor="#4A4848"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/saffron"
+                    android:textSize="20sp"
+                    android:padding="8dp"
+                    android:text="Mukti Dham Mukam"
+                    android:textStyle="bold"
+                    android:textColorHint="@color/saffron"
+                    android:inputType="textMultiLine"
+                    android:minLines="2"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

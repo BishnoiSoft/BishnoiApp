@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_play_layout"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/title_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/upper_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white"
+                android:backgroundTint="@color/white"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="प्ले स्टोर पर नई संस्करण उपलब्ध है।"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_marginHorizontal="10dp"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                    <Button
+                        android:id="@+id/btnUpdate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/saffron"
+                        android:textColor="@color/white"
+                        android:text=" अपडेट "
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="10dp"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Template View for native ad -->
+            <com.google.android.ads.nativetemplates.TemplateView
+                android:id="@+id/nativeTemplateView"
+                android:layout_alignParentBottom= "true"
+                android:visibility= "gone"
+                app:gnt_template_type= "@layout/gnt_small_template_view"
+                android:layout_width= "match_parent"
+                android:layout_height= "wrap_content"
+                android:layout_margin="10dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/panchangCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                android:minHeight="40dp"
+                android:padding="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:padding="5dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="28sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="sans-serif-black"
+                        android:padding="5dp"
+                        android:text="आज का पंचांग"
+                        android:textAlignment="center"
+                        android:textColor="@color/brown"
+                        android:textSize="25sp" />
+
+
+                    <TextView
+                        android:id="@+id/tithi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="sans-serif-black"
+                        android:lineSpacingExtra="4dp"
+                        android:padding="5dp"
+                        android:textAlignment="center"
+                        android:textColor="#FF8C00"
+                        android:textSize="20sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/btn_share_whatsapp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/endingTime"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:drawableStart="@drawable/icon_whatsapp_saffron_24"
+                        android:drawablePadding="5dp"
+                        android:padding="4dp"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/saffron"
+                        android:textSize="18sp"
+                        android:layout_gravity="end"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+<!--            <include-->
+<!--                layout="@layout/gnt_small_template_view"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content" />-->
+
+            <RelativeLayout
+                android:id="@+id/bhajan_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_bhajan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:padding="10dp"
+                    android:text=" भजन "
+                    android:textColor="#0C0000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/text_see_all_bhajan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/text_bhajan"
+                    android:layout_alignBottom="@+id/text_bhajan"
+                    android:layout_alignParentEnd="true"
+                    android:drawableRight="@drawable/baseline_arrow_forward_brown"
+                    android:drawablePadding="2dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text=" सभी देखें "
+                    android:textColor="@color/brown" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/bhajanRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_bhajan"
+                    android:orientation="horizontal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aarti_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_arti"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:text=" आरती "
+                    android:textColor="#0C0000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/text_see_all_arti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/text_arti"
+                    android:layout_alignBottom="@+id/text_arti"
+                    android:layout_alignParentEnd="true"
+                    android:drawableRight="@drawable/baseline_arrow_forward_brown"
+                    android:drawablePadding="2dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text=" सभी देखें "
+                    android:textColor="@color/brown" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/artiRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_arti"
+                    android:orientation="horizontal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_others"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:text=" फीचर्स "
+                    android:textColor="#0C0000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/text_see_all_others"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/text_others"
+                    android:layout_alignBottom="@+id/text_others"
+                    android:layout_alignParentEnd="true"
+                    android:drawableRight="@drawable/baseline_arrow_forward_brown"
+                    android:drawablePadding="2dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="@color/brown" />
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:paddingVertical="20dp"
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardSahitya"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@color/white"
+                        android:backgroundTint="@color/white"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp"
+                        app:cardBackgroundColor="@color/white"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <ImageView
+                                android:id="@+id/forward_sahitya"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/shabadwani_book_icon"
+                                android:layout_marginTop="10dp"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="जाम्भाणी साहित्य "
+                                android:textSize="18sp"
+                                android:textColor="@color/brown"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center"
+                                android:paddingHorizontal="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@id/forward_sahitya"
+                                />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardShabadwani"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@color/white"
+                        android:backgroundTint="@color/white"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp"
+                        app:cardBackgroundColor="@color/white"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <ImageView
+                                android:id="@+id/forward_shabadwani"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/jambhoji_photo"
+                                android:layout_marginTop="10dp"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="शब्दवाणी "
+                                android:textSize="18sp"
+                                android:textColor="@color/brown"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center"
+                                android:paddingHorizontal="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@id/forward_shabadwani"
+                                />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardAmavysya"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:background="@color/white"
+                        android:backgroundTint="@color/white"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp"
+                        app:cardBackgroundColor="@color/white"
+                        android:layout_marginHorizontal="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <ImageView
+                                android:id="@+id/forward_amavysya"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/amavysya_symbol"
+                                android:layout_marginTop="10dp"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="अमावस्या जानकारी"
+                                android:textSize="18sp"
+                                android:textColor="@color/brown"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center"
+                                android:paddingVertical="10dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@id/forward_amavysya"
+                                />
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardRules"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@color/white"
+                        android:backgroundTint="@color/white"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp"
+                        app:cardBackgroundColor="@color/white"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <ImageView
+                                android:id="@+id/forward_rules"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/rules_symbol"
+                                android:layout_marginTop="10dp"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="29 नियम"
+                                android:textSize="18sp"
+                                android:textColor="@color/brown"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center"
+                                android:layout_below="@id/forward_rules"
+                                />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardDownload"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:background="@color/white"
+                        android:backgroundTint="@color/white"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp"
+                        app:cardBackgroundColor="@color/white"
+                        android:layout_marginHorizontal="10dp"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <ImageView
+                                android:id="@+id/forward_downloads"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/baseline_file_download_24"
+                                android:layout_marginTop="10dp"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text=" डाउनलोड "
+                                android:textSize="18sp"
+                                android:textColor="@color/brown"
+                                android:fontFamily="sans-serif-black"
+                                android:gravity="center"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@id/forward_downloads"
+                                />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                >
+
+                <TextView
+                    android:id="@+id/btv_about"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_brown"
+                    android:text="हमारे बारे में"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_toEndOf="@+id/btv_download"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/btv_terms"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_brown"
+                    android:text=" नियम और शर्ते "
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_toEndOf="@id/btv_about"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/btv_disclaimer"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/dark_brown"
+                    android:text=" डिस्क्लेमर "
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:textSize="20sp"
+                    android:layout_toEndOf="@id/btv_terms"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        layout="@layout/layout_bottom_play"/>
+</RelativeLayout>

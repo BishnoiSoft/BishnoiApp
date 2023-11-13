@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="0dp"
+        android:background="@color/white"
+        app:cardCornerRadius="0dp"
+        android:paddingHorizontal="5dp"
+        android:paddingBottom="2dp"
+        android:paddingTop="20dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/imageCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardElevation="-1dp"
+                app:cardCornerRadius="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginVertical="5dp"
+                >
+
+                <ImageView
+                    android:id="@+id/iconView"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/app_name"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <HorizontalScrollView
+                android:id="@+id/scroll_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/imageCard"
+                android:layout_toStartOf="@+id/views_text"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/titleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" गुरु जम्भेश्वर भगवान "
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingHorizontal="3dp"
+                    android:paddingVertical="2dp"
+                    android:textStyle="bold"
+                    android:textColor="#0C0000"
+                    android:textSize="18sp"
+                    />
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/artistView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Bishnoi App"
+                android:layout_marginBottom="1dp"
+                android:layout_marginStart="3dp"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="3dp"
+                android:layout_toEndOf="@+id/imageCard"
+                android:layout_below="@+id/scroll_title"
+                android:layout_toStartOf="@+id/views_text"
+                android:textColor="@color/background_gray"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                />
+
+
+            <TextView
+                android:id="@+id/views_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@+id/imageCard"
+                android:layout_alignTop="@+id/imageCard"
+                android:paddingHorizontal="10dp"
+                android:text="0\nViews"
+                android:gravity="center"
+                android:textColor="@color/background_gray"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/et_line"
+                android:layout_below="@id/imageCard"
+                android:paddingHorizontal="20dp"
+                />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

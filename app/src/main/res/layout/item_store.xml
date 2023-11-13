@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    >
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="0dp"
+        android:layout_marginVertical="8dp"
+        android:background="@color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="5dp"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/imageCard"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:cardElevation="-1dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="3dp"
+                android:background="@color/white"
+                >
+
+                <ImageView
+                    android:id="@+id/item_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/app_name"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                >
+                <TextView
+                    android:id="@+id/item_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" गुरु जम्भेश्वर भगवान "
+                    android:layout_marginHorizontal="5dp"
+                    android:paddingHorizontal="3dp"
+                    android:paddingVertical="2dp"
+                    android:textStyle="bold"
+                    android:textColor="#0C0000"
+                    android:textSize="21sp"
+                    android:layout_toLeftOf="@+id/item_details"
+                    />
+
+                <TextView
+                    android:id="@+id/item_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" कलाकार "
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="3dp"
+                    android:paddingVertical="2dp"
+                    android:paddingHorizontal="5dp"
+                    android:textColor="@color/background_gray"
+                    android:textSize="18sp"
+                    android:layout_below="@id/item_title"
+                    android:layout_toLeftOf="@+id/item_details"
+                    android:layout_marginHorizontal="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/item_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:drawableEnd="@drawable/baseline_arrow_forward_saffron_24"
+                    android:drawablePadding="5dp"
+                    android:padding="5dp"
+                    android:paddingVertical="5dp"
+                    android:text="देखे"
+                    android:textColor="@color/saffron"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

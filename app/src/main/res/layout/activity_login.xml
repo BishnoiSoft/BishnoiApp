@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Login"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_login_1"
+        android:layout_weight="8"
+        >
+
+    <ImageView
+        android:id="@+id/image_login"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:src="@drawable/jambhoji_icon_login"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        />
+
+        <TextView
+            android:id="@+id/text_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="135dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="134dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="लॉगिन करे"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/mprogressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:outlineSpotShadowColor="@color/saffron"
+        android:outlineAmbientShadowColor="@color/saffron"
+        style="@android:style/Widget.ProgressBar.Large"
+        android:indeterminate="true"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/layout_send_otp"
+        android:minHeight="50dp"
+        android:padding="10dp"
+        android:layout_marginTop="40dp"
+        android:visibility="visible"
+        android:layout_weight="1"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/filledPhoneTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:hint="फ़ोन नंबर दर्ज करे"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="10dp"
+            app:boxStrokeColor="@color/saffron"
+
+            android:textColorHint="@color/saffron">
+
+            <!--this is the actual edit text which takes the input-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:maxLength="10"
+                android:inputType="phone"
+                android:textColorHint="@color/saffron"
+                android:drawableStart="@drawable/baseline_phone_24"
+                android:drawablePadding="15dp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSendOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text=" ओटीपी भेजें "
+            android:layout_below="@id/filledPhoneTextField"
+            android:layout_marginBottom="16dp"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:backgroundTint="@color/saffron"
+            app:cornerRadius="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="20dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:drawableRight="@drawable/baseline_arrow_forward_24"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/layout_submit_otp"
+        android:minHeight="50dp"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:layout_weight="1"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/filledOTPTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:hint="ओटीपी दर्ज करे"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="10dp"
+            app:boxStrokeColor="@color/saffron"
+            android:textColorHint="@color/saffron">
+
+            <!--this is the actual edit text which takes the input-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etOtp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:maxLength="10"
+                android:inputType="phone"
+                android:textColorHint="@color/saffron"
+                android:drawableStart="@drawable/baseline_lock_saffron_24"
+                android:drawablePadding="15dp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSubmitOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="लॉगिन करे"
+            android:layout_marginBottom="16dp"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/saffron"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            app:cornerRadius="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="20dp"
+            android:layout_gravity="center_horizontal"
+            android:drawableRight="@drawable/baseline_arrow_forward_24"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/see_terms"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="जब आप लॉगिन करते हैं, आप हमारे नियम और शर्तों से सहमत हो जाएंगे। \n नियम और शर्तें देखेंं >"
+        android:textColor="@color/saffron"
+        android:gravity="center_horizontal"
+        android:padding="2dp"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>

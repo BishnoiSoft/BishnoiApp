@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/select_dob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Date of Birth"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:textColor="@color/black"/>
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:minHeight="250dp"
+        android:layout_below="@+id/select_dob"
+        android:layout_centerHorizontal="true"
+        android:datePickerStyle="@style/MyDatePickerStyle"
+        android:calendarTextColor="@color/white"
+        android:backgroundTint="@color/saffron"
+        android:background="@color/saffron"
+        android:outlineSpotShadowColor="@color/saffron"
+        />
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:layout_margin="0dp"
+        android:src="@drawable/baseline_close_24"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        />
+
+</RelativeLayout>
